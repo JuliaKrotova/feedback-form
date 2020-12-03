@@ -1,0 +1,78 @@
+html {
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #333333;
+  background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li {
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[data-barba="container"] {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1280px;
+  }
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.button {
+  @include button;
+}
+
+.button--current,
+.button:focus,
+.button:hover {
+  background-color: $blue;
+  color: $white;
+}
+
+.button--current:hover,
+.button--current:focus {
+  opacity: 0.6;
+}
+
+.wrapper {
+  padding-top: 2.625rem;
+  padding-bottom: 2.625rem;
+}

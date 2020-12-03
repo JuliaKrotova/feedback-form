@@ -1,0 +1,22 @@
+@mixin button(
+  $border-radius: 0.25rem,
+  $background-color: $gray,
+  $opacity: 1,
+  $color: $black,
+  $font-size: 0.875rem,
+  $padding: 0.1875rem 0.9375rem 0.25rem
+) {
+  text-align: center;
+  white-space: nowrap;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  background-color: $background-color;
+  transition: background-color 0.2s, color 0.2s;
+  outline: none;
+  opacity: $opacity;
+  color: $color;
+  font-size: $font-size;
+  line-height: 1.25rem;
+  padding: $padding;
+}
