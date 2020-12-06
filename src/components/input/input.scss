@@ -1,5 +1,6 @@
 .input {
   $root: &;
+  position: relative;
   display: flex;
   align-items: baseline;
   width: 100%;
@@ -23,6 +24,14 @@
     line-height: 1.375rem;
   }
 
+  &__error {
+    position: absolute;
+    font-size: 14px;
+    bottom: -20px;
+    right: 0;
+    color: $red;
+  }
+
   &__input.error {
     border: 2px solid $red;
   }
@@ -31,5 +40,11 @@
 .input.fill {
   .input__input {
     border: 2px solid $blue;
+  }
+}
+
+.input.error {
+  .input__input {
+    border: 2px solid $red;
   }
 }

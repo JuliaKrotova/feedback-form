@@ -65,19 +65,31 @@ export default class Input extends Component.Default {
   setEmailError = (e: any) => {
     if (this.success) {
       this.nError.textContent = "";
-    } else this.nError.textContent = "Введен неверный eMail";
+      this.nRoot.classList.remove("error");
+    } else {
+      this.nError.textContent = "Неверный eMail";
+      this.nRoot.classList.add("error");
+    }
   };
 
   setPhoneError = (e: any) => {
     if (this.success) {
       this.nError.textContent = "";
-    } else this.nError.textContent = "Введен неверный телефон";
+      this.nRoot.classList.remove("error");
+    } else {
+      this.nError.textContent = "Неверный телефон";
+      this.nRoot.classList.add("error");
+    }
   };
 
   setTextError = (e: any) => {
     if (this.success) {
       this.nError.textContent = "";
-    } else this.nError.textContent = "Заполните это поле";
+      this.nRoot.classList.remove("error");
+    } else {
+      this.nError.textContent = "Заполните это поле";
+      this.nRoot.classList.add("error");
+    }
   };
 
   destroy = () => {

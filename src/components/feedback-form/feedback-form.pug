@@ -8,24 +8,24 @@ mixin feedback-form(props)
             name: 'name',
             placeholder: 'ФИО',
             required: true
-        }).feedback-form__input
+        }).feedback-form__group
         +input({
             label: 'Телефон',
             name: 'phone',
             type: 'tel',
             placeholder: 'Телефон',
             required: true
-        }).feedback-form__input
+        }).feedback-form__group
         +input({
             label: 'Email',
             name: 'email',
             type: 'email',
             placeholder: 'Email',
             required: true
-        }).feedback-form__input
+        }).feedback-form__group
         +textarea({
             label: 'Сообщение',
             name: 'message',
             placeholder: 'Сообщение'
-        })
+        }).feedback-form__group
         button.feedback-form__button Отправить

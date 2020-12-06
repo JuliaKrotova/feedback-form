@@ -11,8 +11,8 @@
   margin: 3.125rem auto 3.125rem auto;
   width: 50%;
 
-  &__input {
-    margin-bottom: 1.25rem;
+  &__group {
+    margin-bottom: 1.875rem;
   }
 
   &__button {
@@ -24,7 +24,6 @@
     cursor: pointer;
     background-color: #f2f2f2;
     transition: background-color 0.2s, color 0.2s;
-    margin-top: 1.875rem;
     outline: none;
     color: inherit;
 
