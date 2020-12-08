@@ -16,15 +16,15 @@ export default class Input extends Component.Default {
     switch (this.type) {
       case "email":
         this.nInput.addEventListener("input", this.emailValidate);
-        this.nInput.addEventListener("blur", this.setEmailError);
+        this.nInput.addEventListener("blur", () => { this.setError('Неверный eMail')});
         break;
       case "tel":
         this.nInput.addEventListener("input", this.phoneValidate);
-        this.nInput.addEventListener("blur", this.setPhoneError);
+        this.nInput.addEventListener("blur", () => { this.setError('Неверный телефон')});
         break;
       default:
         this.nInput.addEventListener("input", this.defaultValidate);
-        this.nInput.addEventListener("blur", this.setTextError);
+        this.nInput.addEventListener("blur", () => { this.setError('Заполните это поле')});
     }
   }
 
@@ -62,35 +62,17 @@ export default class Input extends Component.Default {
     this.setFill();
   };
 
-  setEmailError = (e: any) => {
+  setError = (message: string) => {
     if (this.success) {
       this.nError.textContent = "";
       this.nRoot.classList.remove("error");
     } else {
-      this.nError.textContent = "Неверный eMail";
+      this.nError.textContent = message;
       this.nRoot.classList.add("error");
     }
   };
 
-  setPhoneError = (e: any) => {
-    if (this.success) {
-      this.nError.textContent = "";
-      this.nRoot.classList.remove("error");
-    } else {
-      this.nError.textContent = "Неверный телефон";
-      this.nRoot.classList.add("error");
-    }
-  };
 
-  setTextError = (e: any) => {
-    if (this.success) {
-      this.nError.textContent = "";
-      this.nRoot.classList.remove("error");
-    } else {
-      this.nError.textContent = "Заполните это поле";
-      this.nRoot.classList.add("error");
-    }
-  };
 
   destroy = () => {
     // Destroy functions
